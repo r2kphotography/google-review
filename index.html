@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>R2K Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #000, #222);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .box {
+      background: rgba(0,0,0,0.8);
+      padding: 40px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+    }
+    button {
+      padding: 12px 25px;
+      margin-top: 15px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .review {
+      background: gold;
+    }
+    .continue {
+      background: #00ff99;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h2>Welcome to R2K Photography 📸</h2>
+  <p>Please give us a Google Review</p>
+
+  <button class="review" onclick="openReview()">Give Review</button>
+
+  <br>
+
+  <button class="continue" id="continueBtn" onclick="goNext()">
+    Continue ➜
+  </button>
+</div>
+
+<script>
+  function openReview() {
+    window.open("https://g.page/r/YOUR_GOOGLE_REVIEW_LINK", "_blank");
+    document.getElementById("continueBtn").style.display = "inline-block";
+  }
+
+  function goNext() {
+    window.location.href = "https://your-next-link.com";
+  }
+</script>
+
+</body>
+</html>
